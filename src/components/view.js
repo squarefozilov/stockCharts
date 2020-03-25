@@ -5,24 +5,24 @@ class Navbar extends React.Component{
     render(){
         return(
             <div> 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="navbar-brand" href="/">Stock Base</a>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul className="navbar-nav">
+            <li className="nav-item">
+                <a className="navbar-brand" href="/">Stock Base</a>
             </li>
             </ul>
-            <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-            <a class="nav-link" href="/company">Most Active Company</a>
+            <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+            <a className="nav-link" href="/company">Most Active Company</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="/list">Watch List</a>
+            <li className="nav-item">
+            <a className="nav-link" href="/list">Watch List</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link signin" href="/singup">Sign in</a>
+            <li className="nav-item">
+            <a className="nav-link signin" href="/singup">Sign in</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link logout" href="/logout"></a>
+            <li className="nav-item">
+            <a className="nav-link logout" href="/logout"></a>
             </li>
             </ul>
             </nav>
