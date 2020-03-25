@@ -13,10 +13,10 @@ class Navbar extends React.Component{
             </ul>
             <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-            <a className="nav-link" href="/company">Most Active Company</a>
+            <a className="nav-link" href="/company">Prices</a>
             </li>
             <li className="nav-item">
-            <a className="nav-link" href="/list">Watch List</a>
+            <a className="nav-link" href="/list">Price charts</a>
             </li>
             <li className="nav-item">
             <a className="nav-link signin" href="/singup">Sign in</a>

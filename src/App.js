@@ -8,6 +8,10 @@ import './App.css';
 import List from './components/stockList';
 import Active from './components/active'
 
+// 
+//Products 
+//Company
+//Earn crypto
 
 class App  extends React.Component {
       state = {
@@ -19,18 +23,22 @@ class App  extends React.Component {
         news: [],
         showAllNews: false,
         chart: [],
-        showAllChart: false
+        showAllChart: false,
+        page : true
       }
 
 
   render(){
 
-  
+    const isLoggedIn = this.state.page;
   return (
+    
     <div className="App">
-      <Navbar />
-      <Stock />
-      <Active />
+        <Navbar />
+        {isLoggedIn ? <Stock />  :  <Active /> }
+    
+     
+     
      
     </div>
   );
