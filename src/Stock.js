@@ -116,8 +116,6 @@ class Stock extends React.Component {
  
     return (
       <div> 
-           
-         
             <div className="container">
                     <div className="row">
                       <div className="col-md-6 mt-5 mx-auto">
@@ -136,15 +134,9 @@ class Stock extends React.Component {
                             className="btn btn-secondary"> Search
                           </button>
                         </form>
-
                       </div>
                     </div>
                   </div>   
-
-
-         
-    
-         
         <Plot
           data={[
             {

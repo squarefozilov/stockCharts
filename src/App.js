@@ -7,12 +7,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import List from './components/stockList';
 import Active from './components/active'
-
-// 
 //Products 
 //Company
 //Earn crypto
-
 class App  extends React.Component {
       state = {
         error: null,
@@ -29,17 +26,11 @@ class App  extends React.Component {
 
 
   render(){
-
-    const isLoggedIn = this.state.page;
+      const isLoggedIn = this.state.page;
   return (
-    
     <div className="App">
         <Navbar />
         {isLoggedIn ? <Stock />  :  <Active /> }
-    
-     
-     
-     
     </div>
   );
   }
