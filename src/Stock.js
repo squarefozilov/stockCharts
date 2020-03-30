@@ -9,7 +9,7 @@ class Stock extends React.Component {
     this.state = {
       stockChartXValues: [],
       stockChartYValues: [], 
-      search : 'FB',
+      search : this.props.data,
       active : [],
       fix : [],
   

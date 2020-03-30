@@ -1,11 +1,12 @@
 import React,{Component} from 'react'
-
+import Charts from './../Stock';
 class MostActive extends Component{
     constructor(props) {
         super(props);
         this.state = {
           search : 'FB',
           active : [],
+          page : false
         }
 
         this.chartsClick = this.chartsClick.bind(this);
@@ -20,7 +21,22 @@ class MostActive extends Component{
         e.preventDefault()
 
           console.log(e.target.id);
+          
+         
       }
+
+      onChange(e){
+        e.preventDefault()
+        console.log("mytest")
+        console.log();
+        //console.log(this.props.changeState(this.state.page))
+        this.props.changeState({
+          page : true,
+          symbol : e.target.id
+        })
+      }
+
+    
 
 
     fetchMostActive(){
@@ -63,9 +79,8 @@ class MostActive extends Component{
       }
 
     render(){
-
-
-       
+      console.log(this.props.changeState);
+       const page = this.state.page;
         const items = this.state.active.map((item , index) =>{
           console.log("222");
           //console.log(item[0][0].ticker);
@@ -80,15 +95,22 @@ class MostActive extends Component{
                       <p> Price ${item.price}  Changes % {item.changesPercentage} </p>
                      
                  </div>
-                 <button id={item.ticker} onClick={this.chartsClick} name={item.ticker} type="button" class="btn btn-secondary align-self-end btn btn-lg btn-block btn-primary">Price Charts</button>
+               
+                 <button id={item.ticker} onClick={this.onChange.bind(this)} name={item.ticker} type="button" className="btn btn-secondary align-self-end btn btn-lg btn-block btn-primary">Price Charts</button>
                  </div>
+              
                 </div>
          
         });
         return(
-            <div> <br/> <br/>
-                {items}
-            </div>
+            
+          
+          <div><br/><br/>
+             {items}  
+
+             <button onClick={this.onChange.bind(this)} > Test</button>
+          </div>
+            
         )
     }
 

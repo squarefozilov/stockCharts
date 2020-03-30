@@ -11,18 +11,33 @@ import Active from './components/active'
 //Company
 //Earn crypto
 class App  extends React.Component {
-      state = {
-        error: null,
-        enteredSymbol: "NFLX",
-        quote: null,
-        quoteHistory: [],
-        showHistory: false,
-        news: [],
-        showAllNews: false,
-        chart: [],
-        showAllChart: false,
-        page : true
+       constructor(){
+         super();
+        this.state = {
+          error: null,
+          enteredSymbol: "NFLX",
+          quote: null,
+          quoteHistory: [],
+          showHistory: false,
+          news: [],
+          showAllNews: false,
+          chart: [],
+          showAllChart: false,
+          page : false
+        }
+
+       }
+     
+      
+      onChangeLink(data){
+        console.log("test"+ data.page);
+        console.log("test"+ data.symbol);
+          this.setState({
+             page : data.page,
+             enteredSymbol : data.symbol
+          })
       }
+
 
 
   render(){
@@ -30,7 +45,10 @@ class App  extends React.Component {
   return (
     <div className="App">
         <Navbar />
-        {isLoggedIn ? <Stock />  :  <Active /> }
+        {isLoggedIn ? 
+        <Stock data={this.state.enteredSymbol} />  
+        :  
+        <Active changeState={this.onChangeLink.bind(this)}  /> }
     </div>
   );
   }

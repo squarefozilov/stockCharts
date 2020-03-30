@@ -61,3 +61,66 @@
       "companyName" : "Cable One Inc."
     } ]
   }
+  {
+    "mostActiveStock" : [ {
+      "ticker" : "BRK-A",
+      "changes" : 27090.0,
+      "price" : "267090",
+      "changesPercentage" : "(+11.29%)",
+      "companyName" : "Berkshire Hathaway Inc."
+    }, {
+      "ticker" : "MLCVG.PA",
+      "changes" : -700.0,
+      "price" : "3200",
+      "changesPercentage" : "(-17.95%)",
+      "companyName" : "Societe des Chemins de Fer et Tramways du Var et du Gard"
+    }, {
+      "ticker" : "NVR",
+      "changes" : 458.49,
+      "price" : "2633.49",
+      "changesPercentage" : "(+21.08%)",
+      "companyName" : "NVR Inc."
+    }, {
+      "ticker" : "LOTB.BR",
+      "changes" : 150.0,
+      "price" : "2750",
+      "changesPercentage" : "(+5.77%)",
+      "companyName" : "Lotus Bakeries NV"
+    }, {
+      "ticker" : "DRIP",
+      "changes" : -137.635,
+      "price" : "258.935",
+      "changesPercentage" : "(-34.71%)",
+      "companyName" : "Direxion Daily S&P Oil & Gas Exp. & Prod. Bear 3X Shares"
+    }, {
+      "ticker" : "ERY",
+      "changes" : -137.0,
+      "price" : "150.54",
+      "changesPercentage" : "(-47.65%)",
+      "companyName" : "Direxion Daily Energy Bear 3X Shares"
+    }, {
+      "ticker" : "COBH.BR",
+      "changes" : 120.0,
+      "price" : "3180",
+      "changesPercentage" : "(+3.92%)",
+      "companyName" : "Brouwerij Handelsmaatschappij NV"
+    }, {
+      "ticker" : "WTM",
+      "changes" : 117.87,
+      "price" : "824.75",
+      "changesPercentage" : "(+16.67%)",
+      "companyName" : "White Mountains Insurance Group Ltd."
+    }, {
+      "ticker" : "MKL",
+      "changes" : 111.79,
+      "price" : "854",
+      "changesPercentage" : "(+15.06%)",
+      "companyName" : "Markel Corporation"
+    }, {
+      "ticker" : "CABO",
+      "changes" : 110.17,
+      "price" : "1378.74",
+      "changesPercentage" : "(+8.68%)",
+      "companyName" : "Cable One Inc."
+    } ]
+  }
