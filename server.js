@@ -14,7 +14,16 @@ app.use(
   })
 )
 
-const mongoURI = 'mongodb://localhost:27017/mernloginreg' || process.env.MONGODB_URI;
+if (process.env.NODE_ENV === "production") {
+
+  app.use(express.static('client/built'));
+  app.get("*", (req, res) => {
+      res.sendFile(require('path')
+          .resolve(__dirname, 'client', 'build', 'index.html'));
+  })
+}
+
+const mongoURI = 'mongodb://<user>:<password1>@ds221405.mlab.com:21405/heroku_0l1zmwm3' || process.env.MONGODB_URI;
 
 mongoose
   .connect(
@@ -32,9 +41,10 @@ var Users = require('./routes/Users')
 
 app.use('/users', Users)
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, 'client','build','index.html'));
-});
+
+//app.get("*", (req, res) => {
+ // res.sendFile(path.join(__dirname, 'client','build','index.html'));
+//});
 app.listen(port, function() {
   console.log('Server is running on port: ' + port)
 })
