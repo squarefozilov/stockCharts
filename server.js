@@ -1,6 +1,7 @@
 var express = require('express')
 var cors = require('cors')
 var bodyParser = require('body-parser')
+const path = require("path");
 var app = express()
 const mongoose = require('mongoose')
 var port = process.env.PORT || 3000
@@ -32,7 +33,7 @@ var Users = require('./routes/Users')
 app.use('/users', Users)
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, 'client','build','index.html'));
 });
 app.listen(port, function() {
   console.log('Server is running on port: ' + port)
