@@ -21,18 +21,21 @@ class Register extends Component {
   }
   onSubmit(e) {
     e.preventDefault()
-
-    const newUser = {
-      first_name: this.state.first_name,
-      last_name: this.state.last_name,
-      email: this.state.email,
-      password: this.state.password
-    }
-
-    register(newUser).then(res => {
-      this.props.history.push(`/login`)
-    })
+    if(this.state.first_name !='' && this.state.last_name !== '' &&  this.state.email != '' && this.state.password != ''){
+      const newUser = {
+        first_name: this.state.first_name,
+        last_name: this.state.last_name,
+        email: this.state.email,
+        password: this.state.password
+      }
+  
+      register(newUser).then(res => {
+        this.props.history.push(`/login`)
+      })
+    }  
   }
+
+
 
   render() {
     return (
