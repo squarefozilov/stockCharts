@@ -1,18 +1,34 @@
 {
   "name": "client",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "axios": "^0.17.1",
-        "react": "^16.2.0",
-        "react-dom": "^16.2.0",
-        "react-scripts": "1.0.17"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject"
-    },
-    "proxy": "http://localhost:8000"
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). ![](/public/1.png) ![](/public/2.png) ## Available Scripts",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "jwt-decode": "^2.2.0",
+    "plotly.js": "^1.52.3",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-plotly.js": "^2.4.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^2.1.8",
+    "yarn": "^1.22.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+    
+  },
+  "proxy": "http://localhost:8000",
+  "author": "abbosjon",
+  "license": "ISC",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
