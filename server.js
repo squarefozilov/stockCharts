@@ -15,6 +15,10 @@ app.use(
 )
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('client/built'));
+  app.get("*", (req, res) => {
+    res.sendFile(require('path')
+        .resolve(__dirname, 'client', 'build', 'index.html'));
+    })
 }
 
 /**
@@ -27,15 +31,17 @@ if (process.env.NODE_ENV === "production") {
   })
 }
 */
-const mongoURI = 'mongodb://<user>:<password1>@ds221405.mlab.com:21405/heroku_0l1zmwm3' || process.env.MONGODB_URI;
+
+//mongoURI = ''
+const mongoURI = 'mongodb://localhost:27017/mernloginreg' || process.env.MONGODB_URI;
 
 mongoose
   .connect(
     mongoURI,
     { 
       useUnifiedTopology: true,
-useNewUrlParser: true,
-useFindAndModify: true
+      useNewUrlParser: true,
+      useFindAndModify: true
     }
   )
   .then(() => console.log('MongoDB Connected'))
