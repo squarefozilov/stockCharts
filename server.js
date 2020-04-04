@@ -13,7 +13,10 @@ app.use(
     extended: false
   })
 )
-
+app.get('/*', function(request, response) {
+  response.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
+});
+/**
 if (process.env.NODE_ENV === "production") {
   app.use(express.static('client/built'));
   
@@ -22,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
           .resolve(__dirname, 'client', 'build', 'index.html'));
   })
 }
-
+*/
 const mongoURI = 'mongodb://<user>:<password1>@ds221405.mlab.com:21405/heroku_0l1zmwm3' || process.env.MONGODB_URI;
 
 mongoose
