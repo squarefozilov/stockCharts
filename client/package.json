@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "1.0.0",
+  "proxy": "http://localhost:3001",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). ![](/public/1.png) ![](/public/2.png) ## Available Scripts",
   "main": "index.js",
   "dependencies": {
@@ -16,7 +17,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    
+    "eject": "react-scripts eject"
   },
   "author": "abbosjon",
   "license": "ISC"
