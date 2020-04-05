@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === "production") {
           .resolve(__dirname, 'client', 'build', 'index.html'));
   })
 }
-
+*/
 
 //mongoURI = 'mongodb://<dbuser>:<dbpassword>@ds221405.mlab.com:21405/heroku_0l1zmwm3'
 //const mongoURI = process.env.MONGODB_URI ||  'mongodb://localhost:27017/mernloginreg' ;
@@ -56,5 +56,3 @@ app.use('/users', Users)
 app.listen(port, function() {
   console.log('Server is running on port: ' + port)
 })
-
-*/
