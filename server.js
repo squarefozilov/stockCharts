@@ -38,9 +38,9 @@ if (process.env.NODE_ENV === "production") {
 }
 */
 
-//mongoURI = ''
-const mongoURI = process.env.MONGODB_URI ||  'mongodb://localhost:27017/mernloginreg' ;
-
+//mongoURI = 'mongodb://<dbuser>:<dbpassword>@ds221405.mlab.com:21405/heroku_0l1zmwm3'
+//const mongoURI = process.env.MONGODB_URI ||  'mongodb://localhost:27017/mernloginreg' ;
+const mongoURI =    'mongodb://<user2>:<password2>@ds221405.mlab.com:21405/heroku_0l1zmwm3' ;
 mongoose
   .connect(
     mongoURI,
