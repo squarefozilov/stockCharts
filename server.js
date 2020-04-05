@@ -6,6 +6,8 @@ var app = express()
 const mongoose = require('mongoose')
 var port = process.env.PORT || 3000
 
+
+
 app.use(bodyParser.json())
 app.use(cors())
 app.use(
@@ -13,7 +15,11 @@ app.use(
     extended: false
   }) 
 )
-if(process.env.NODE_ENV === 'production'){
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+/*if(process.env.NODE_ENV === 'production'){
   app.use(express.static('client/built'));
   app.get("*", (req, res) => {
     res.sendFile(require('path')
@@ -21,7 +27,7 @@ if(process.env.NODE_ENV === 'production'){
     })
 }
 
-/**
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static('client/built'));
   
@@ -33,7 +39,7 @@ if (process.env.NODE_ENV === "production") {
 */
 
 //mongoURI = ''
-const mongoURI = 'mongodb://localhost:27017/mernloginreg' || process.env.MONGODB_URI;
+const mongoURI = process.env.MONGODB_URI ||  'mongodb://localhost:27017/mernloginreg' ;
 
 mongoose
   .connect(
