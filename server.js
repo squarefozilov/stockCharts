@@ -40,16 +40,8 @@ if (process.env.NODE_ENV === "production") {
 
 //mongoURI = 'mongodb://<dbuser>:<dbpassword>@ds221405.mlab.com:21405/heroku_0l1zmwm3'
 //const mongoURI = process.env.MONGODB_URI ||  'mongodb://localhost:27017/mernloginreg' ;
-const mongoURI = process.env.mongoURI || "mongodb://localhost/project_db";
-mongoose
-  .connect(
-    mongoURI,
-    { 
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-      useFindAndModify: true
-    }
-  )
+const mongoURI = process.env.mongoURI || "mongodb://stockbase1:stockbase1@ds221405.mlab.com:21405/heroku_0l1zmwm3";
+mongoose.connect(mongoURI,{ useNewUrlParser: true})
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err))
 
