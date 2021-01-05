@@ -7,7 +7,7 @@
   "proxy": "http://localhost:3001/",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). ![](/public/1.png) ![](/public/2.png) ## Available Scripts",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "jwt-decode": "^2.2.0",
     "plotly.js": "^1.52.3",
